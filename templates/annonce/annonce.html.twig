@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Table of Annonce</h1>
+<h1>Liste des annonces pour l'agence {{ agence.name }}</h1>
+<form>
+    <table>
+        <thead>
+            <tr><th>ID</th><th>Title</th><th>Publication Date</th><th>Likes</th></tr>
+        </thead>
+        <tbody>
+            {% for annonce in annonces %}
+                <tr>
+                    <td>{{ annonce.id }}</td>
+                    <td>{{ annonce.title }}</td>
+                    <td>{{ annonce.publicationDate|date('d/m/Y') }}</td>
+                    <td>{{ annonce.nbrLike }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Table of Agence</h1>
+
+<form>
+    <table>
+        <thead>
+        <tr><th>ID</th><th>Name</th><th>Local</th></tr>
+        </thead>
+        <tbody>
+        {% for agence in agences %}
+        <tr>
+            <td>{{ agence.id }}</td>
+            <td>{{ agence.name }}</td>
+            <td>{{ agence.local }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</form>
+</body>
+</html>
